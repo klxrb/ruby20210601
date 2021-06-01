@@ -31,14 +31,15 @@ To start local postgresql
 
 ## Deployment via Capistrano
 
-* add 'capistrano' gem to `Gemfile`
+* add `capistrano` gem to `Gemfile`
 * `cap install`
 * configure `Gemfile` and `Capfile`
 * configure `deploy.rb` and `production.rb`
 * ```eval `ssh-agent`; ssh-add```
 * `cap production deploy:check`
 * ssh into the server `ssh deploy@domain.name`
-* create the db config in `shared/config/database.yml` (see example below)
+* create the db config in `/home/deploy/app/shared/config/database.yml` (see example below)
+* logout of the server
 * `cap production setup:copy_linked_master_key`
 * `cap production deploy`
 
