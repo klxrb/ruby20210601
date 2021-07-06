@@ -31,6 +31,7 @@ To start local postgresql
 
 ## Deployment via Capistrano
 
+* copy `provision.sh` to server, configure, and run
 * add `capistrano` gem to `Gemfile`
 * `cap install`
 * configure `Gemfile` and `Capfile`
@@ -49,10 +50,12 @@ To start local postgresql
 production:
   adapter: postgresql
   encoding: unicode
-  database: RubyWorkshop_production
-  username: dev
-  password: example
+  sslmode: require
   pool: 5
-  port: 5432
-  host: localhost
+  username: doadmin
+  password: xxx
+  host: example.com
+  port: 25060
+  database: defaultdb
 ```
+
