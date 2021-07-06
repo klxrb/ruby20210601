@@ -32,10 +32,6 @@ To start local postgresql
 ## Deployment via Capistrano
 
 * copy `provision.sh` to server, configure, and run
-* add `capistrano` gem to `Gemfile`
-* `cap install`
-* configure `Gemfile` and `Capfile`
-* configure `deploy.rb` and `production.rb`
 * ```eval `ssh-agent`; ssh-add```
 * `cap production deploy:check`
 * ssh into the server `ssh deploy@domain.name`
